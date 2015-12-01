@@ -13,6 +13,10 @@
   tags:
     - pin
 
+- include: report.yaml
+  tags:
+    - report
+
 - include: patch.yaml
   tags:
     - patch
