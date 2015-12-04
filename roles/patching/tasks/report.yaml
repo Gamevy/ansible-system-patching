@@ -5,10 +5,5 @@
   when: ansible_os_family == "Debian"
   ignore_errors: yes
 
-- name: Create temporary directory
-  file: path=/tmp/system-patching/ state=directory mode=0755
-  delegate_to: localhost
-  run_once: yes
-
 - name: Get report
   fetch: src=/tmp/{{ ansible_hostname }} dest=/tmp/system-patching/{{ ansible_hostname }} flat=yes
